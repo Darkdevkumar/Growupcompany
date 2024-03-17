@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body::-webkit-scrollbar {
+        width: 10px;
+        cursor: pointer;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.889);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+    .nav_main_1 {
+        width: 100%;
+        height: 4vh;
+        background-color: #511216;
+        overflow: hidden;
+    }
+
+    .nav_up {
+        width: 40%;
+        height: 4vh;
+        display: flex;
+        align-items: center;
+        margin-left: 150px;
+    }
+
+    .nav_up h3 {
+        font-size: 15px;
+        font-weight: 700;
+        background-color: #E66030;
+        color: #fff;
+        width: 200px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: "Poopins", sans-serif;
+        text-align: center;
+    }
+
+    .parts_word {
+        font-family: "Poopins", sans-serif;
+        padding-top: 70px;
+        padding-left: 20px;
+        color: #fff;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        animation: naving 30s infinite;
+        transition: all 0.7s ease-in-out;
+        animation-delay: 4s;
+
+    }
+
+    span {
+        padding-top: 10px;
+    }
+
+    @keyframes naving {
+        0% {
+            transform: translateY(0px);
+        }
+
+        20% {
+            transform: translateY(-25px);
+        }
+
+        40% {
+            transform: translateY(-50px);
+        }
+
+        80% {
+            transform: translateY(-80px);
+        }
+
+        100% {
+            transform: translateY(-79px);
+
+        }
+
+
+
+
+    }
+
+    .buts {
+        margin-left: 50rem;
+        position: absolute;
+    }
+
+    .buts button {
+        width: 150px;
+        height: 4vh;
+        outline: none;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: bold;
+        border: 1px solid rgb(0, 255, 81);
+        background-color: rgb(0, 255, 81);
+
+        transition: all 0.75s ease-in-out;
+    }
+
+    .buts button:hover {
+        border: 1px solid #511216;
+        background-color: #511216;
+        color: rgb(255, 247, 0);
+    }
+
+
+    .nav_main_2 {
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 13vh;
+        z-index: 99;
+        background-color: rgb(255, 254, 254);
+        border: 1px solid #000;
+        gap: 183px;
+        box-shadow: 0px 10px 20px #000;
+
+    }
+
+    .nav_main_2 img {
+        height: 70px;
+        margin-left: 150px;
+    }
+
+    .options ul {
+        display: flex;
+        list-style: none;
+        font-weight: 550;
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .list {
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .list::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.175rem;
+        background-color: #E66030;
+        transform: scale(0, 1);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .list:hover {
+        color: #E66030;
+    }
+
+    .list:hover::after {
+        transform: scale(1, 1);
+    }
+
+    .nav_main_3 {
+        width: 100%;
+        height: 10vh;
+        background-color: #511216;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .nav_main_sub {
+        width: 38rem;
+        padding-left: 20px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        box-shadow: 2px 4px 2px 1px #000000;
+        overflow: hidden;
+
+    }
+
+    .nav_main_3 i {
+        padding-right: 20px;
+        font-size: 20px;
+        cursor: pointer;
+
+    }
+
+    .nav_main_3 input {
+        width: 30rem;
+        height: 50px;
+        outline: none;
+        border: 1px solid #fff;
+
+    }
+
+    .nav_main_3 input::placeholder {
+        font-size: 18px;
+    }
+
+    .nav_main_sub button {
+        height: 7.3vh;
+        width: 100px;
+        outline: none;
+        color: #fff;
+        background-color: #022C5C;
+        border: 1px solid#022C5C;
+        font-weight: bold;
+        cursor: pointer;
+
+
+    }
+
+
+    #page1 {
+        width: 100%;
+        height: 95vh;
+        display: flex;
+        overflow: hidden;
+        border-bottom: 1px solid #000;
+    }
+
+    #page1 img {
+        width: 100%;
+        height: 95vh;
+    }
+
+    #having_bar {
+        width: 100%;
+        height: 20vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    #having_bar i {
+        font-size: 60px;
+    }
+
+    #having_bar i:nth-child(3) {
+        right: 0;
+        position: absolute;
+        top: -25rem;
+    }
+
+    #having_bar i:nth-child(1) {
+        left: 0;
+        position: absolute;
+        top: -25rem;
+    }
+
+    .circleboxes {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        transform: translate(105%, -95%);
+        gap: 30px;
+    }
+
+    .firstimage img {
+        width: 40px;
+    }
+
+    .firstimage h3 {
+        padding-top: 15px;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .firstimage {
+        width: 150px;
+        height: 150px;
+        background-color: #511216af;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 10px 20px #511216;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: all 0.75s ease-in-out;
+    }
+
+    .firstimage:hover {
+        background-color: #E66030;
+        box-shadow: 0px 10px 20px #E66030;
+    }
+
+    #page2 {
+        width: 100%;
+        height: 120vh;
+        display: flex;
+        align-items: center;
+        gap: 10%;
+    }
+
+    #first_colmon {
+        width: 40%;
+        height: 120vh;
+        margin-left: 5%;
+
+    }
+
+    .first_first_sub_colmon {
+        width: 100%;
+        height: 20vh;
+        gap: 30px;
+        border-bottom: 1px solid #000;
+        display: flex;
+        align-items: center;
+    }
+
+    .first_first_sub_colmon .blue_buts {
+        width: 23%;
+        height: 15vh;
+        color: #fff;
+        background-color: #00060c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px
+    }
+
+    .first_first_sub_colmon .white_space {
+        line-height: 30px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .first_first_sub_colmon .white_space p:nth-child(1) {
+        font-weight: 700;
+    }
+
+
+    #sec_colmon {
+        width: 40%;
+        height: 120vh;
+        font-family: "Poppins", sans-serif;
+    }
+
+
+    .sec_sec_sub_colmon {
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #000;
+    }
+
+    .sec_sec_sub_colmon img {
+        border: 1px solid #000;
+        width: 330px;
+
+    }
+
+    .sec_white_space {
+        height: 20.5vh;
+        padding-left: 20px;
+        text-align: left;
+        line-height: 30px;
+    }
+
+    .sec_white_space p:nth-child(1) {
+        font-weight: 600;
+    }
+
+    .butts {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        gap: 60rem;
+
+    }
+
+    .butts button:nth-child(1) {
+        width: 200px;
+        font-weight: bold;
+        height: 50px;
+        border-radius: 10px;
+        background: transparent;
+        border: 1px solid #000;
+        margin-left: 80px;
+
+    }
+
+    .butts button:nth-child(2) {
+        border-radius: 10px;
+        background: transparent;
+        font-weight: bold;
+        border: 1px solid #000;
+        width: 200px;
+        height: 50px;
+
+    }
+
+
+
+
+
+
+    #lists {
+
+
+
+
+        position: absolute;
+        width: 530px;
+        height: 180px;
+        background-color: rgb(255, 255, 255);
+        transform: translate(84.9%, -5%);
+        box-shadow: 0px 10px 20px #000;
+        overflow-y: scroll;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow-x: hidden;
+
+    }
+
+    #lists p {
+        font-size: 17px;
+        cursor: pointer;
+        padding-left: 10px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        line-height: 32px;
+    }
+
+    #lists p:hover {
+        background-color: #E66030;
+        color: #fff;
+    }
+
+
+    #lists::-webkit-scrollbar {
+        width: 5px;
+        cursor: pointer;
+    }
+
+    #lists::-webkit-scrollbar-track {
+        background: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+    #lists::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.889);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #buttom_nav_bar {
+        width: 100%;
+        height: 17vh;
+        background-color: orangered;
+        display: flex;
+        align-items: center;
+        gap: 400px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    #buttom_nav_bar img {
+        width: 100px;
+        margin-left: 70px;
+        border-radius: 100%;
+        outline: none;
+        box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.278);
+    }
+
+    #buttom_nav_bar img:hover {
+
+        box-shadow: inset 5px 10px 20px rgba(255, 255, 255, 0.278);
+    }
+
+
+
+
+
+    .bt_br_con {
+        color: #fff;
+        line-height: 30px;
+    }
+
+    #buttom_nav_bar button {
+        font-size: 15px;
+        box-shadow: inset 5px 10px 20px rgba(255, 255, 255, 0.278);
+        color: #fff;
+        width: 200px;
+        height: 60px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 20px;
+    }
+
+    #icons {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        z-index: 999;
+        right: 0;
+    }
+
+    #icons i {
+        font-size: 35px;
+        cursor: pointer;
+        transition: 0.6s ease-in-out;
+
+
+    }
+
+    #icons i:hover {
+        transform: rotateY(360deg);
+
+    }
+
+    #icons i:nth-child(1) {
+        color: #05448b;
+        background: #fff;
+    }
+
+    #icons i:nth-child(2) {
+        background: #fff;
+        color: #ff0000;
+
+    }
+
+    #icons i:nth-child(4) {
+        background: #fff;
+        color: #0008ff;
+
+    }
+
+
+
+
+
+
+
+
+
+    #page3 {
+        width: 100%;
+        height: 60vh;
+        background-color: #511216;
+        display: flex;
+        color: #fff;
+        gap: 200px;
+        font-family: "Poppins", sans-seri;
+    }
+
+    #page3 h3 {
+        color: #FFE400;
+        font-size: 23px;
+    }
+
+    .first {
+        padding-top: 100px;
+        font-size: 16px;
+        padding-left: 140px;
+        line-height: 30px;
+    }
+
+    .sec {
+        padding-top: 100px;
+        font-size: 16px;
+        padding-left: 50px;
+        line-height: 30px;
+    }
+
+    .third {
+        padding-top: 100px;
+        font-size: 16px;
+        padding-left: 50px;
+        line-height: 30px;
+
+    }
+
+    .threedot {
+        position: absolute;
+        width: 179vh;
+        height: 600vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 30px;
+        z-index: 999;
+
+    }
+
+    .threebut {
+        display: none;
+    }
+
+    .threedot h2 {
+        position: absolute;
+        font-size: 70px;
+        right: 150px;
+        width: 120px;
+        background: #000;
+        color: #fff;
+        height: 130px;
+        border: 5px solid #000;
+    }
+
+
+    .threedot ul {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 170vh;
+        height: 400vh;
+        margin-top: 100rem;
+    }
+
+    .threedot li {
+        margin-top: 100px;
+        line-height: 60px;
+        font-size: 60px;
+        font-weight: bold;
+        list-style: none;
+        text-align: center;
+        border-radius: 20px;
+        width: 488px;
+        height: 63px;
+        border: 2px solid #000;
+    }
+
+    #dots {
+        font-size: 96px;
+        margin-left: 194px;
+        display: none;
+    }
+
+
+
+
+
+
+
+/* meadia */
+
+
+
+@media(max-width:600px) {
+    body{
+        /* overflow: hidden; */
+    }
+    .nav_main_1 {
+        display: none;
+    }
+    .nav_main_2 {
+        width: 179vh;
+        height: 45vh;
+        z-index: 99;
+    }
+    .nav_main_2 img {
+        width: 428px;
+        height: 196px;
+        margin-left: 38px;
+        margin-bottom: 35px;
+    }
+    .options ul {
+        display: none;
+    }
+
+
+.nav_main_3 {
+    width: 179vh;
+    height: 24vh;
+    background-color: #511216;
+    overflow:hidden;
+    
+}
+
+.nav_main_sub {
+    width: 72rem;
+    height:152px;
+    padding-left: 20px;
+   
+    overflow: hidden;
+
+}
+
+.nav_main_3 i {
+    padding-right: 20px;
+    font-size: 42px;
+    cursor: pointer;
+
+}
+
+.nav_main_3 input {
+    width: 552rem;
+    height: 91px;
+    outline: none;
+    border: 1px solid #fff;
+
+}
+.nav_main_3 input::placeholder {
+    font-size: 31px;
+}
+.nav_main_sub button {
+    width: 254px;
+    height:150px;
+    font-size:28px;
+    background-color: #022C5C;
+    border: 1px solid#022C5C;
+    cursor: pointer;
+}
+
+#page1 {
+    width: 344%;
+    height: 112vh;
+    display: flex;
+    overflow: hidden;
+    border-bottom: 1px solid #000;
+}
+
+#page1 img {
+    width: 100%;
+    height: 115vh;
+}
+
+#having_bar {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#having_bar i {
+    display:none;
+}
+
+
+
+.circleboxes {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform: translate(38%, -95%);
+    gap: 30px;
+}
+
+
+.firstimage h3 {
+    padding-top: 15px;
+    font-size: 25px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.firstimage {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+
+/*  */
+/*  */
+#page2 {
+    width: 332vw;
+    height: auto;
+    flex-wrap:wrap;
+    display: block;
+    align-items: center;
+}
+
+#first_colmon {
+    width: 100%;
+    height: 143vh;
+    margin-left: 0%;
+
+}
+
+.first_first_sub_colmon {
+    width: 100%;
+    height: 23vh;
+    gap: 30px;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+}
+
+.first_first_sub_colmon .blue_buts {
+    width: 33%;
+    height: 21vh;
+    color: #fff;
+    background-color: #00060c;
+   font-size:24px;
+   
+}
+
+.first_first_sub_colmon .white_space {
+    line-height: 30px;
+    font-size:29px;
+    font-family: "Poppins", sans-serif;
+}
+
+.first_first_sub_colmon .white_space p:nth-child(1) {
+    font-weight: 700;
+    
+}
+
+
+#sec_colmon {
+    width: 100%;
+    height: 132vh;
+    font-size:30px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.sec_sec_sub_colmon {
+    height: 33vh;
+    
+    border-bottom: none;
+}
+
+.sec_sec_sub_colmon img {
+    border: 1px solid #000;
+    width: 415px;
+
+}
+
+.sec_white_space {
+    height: 20.5vh;
+    padding-left: 20px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.sec_white_space p:nth-child(1) {
+    font-weight: 100;
+}
+
+.butts {
+    width: 344vw;
+    height: 22vh;
+   
+
+}
+
+.butts button:nth-child(1) {
+    text-align:center;
+  border:2px solid #000;
+    font-size:34px;
+    width:22rem;
+    height:6rem;
+    position:absolute;
+   
+
+}
+
+.butts button:nth-child(2) {
+  position:absolute;
+    border:2px solid #000;
+    text-align:center;
+    margin-left:756px;
+    font-size:34px;
+    width:22rem;
+    height:6rem;
+
+}
+
+
+
+
+#lists {
+    width: 65rem;
+    height: 334px;
+    transform: translate(0.9000000000000057%, 1%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+#lists p {
+    font-size: 35px;
+    padding-top:30px;
+    cursor: pointer;
+    padding-left: 10px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+
+#buttom_nav_bar{
+    width: 344vw;
+    height: 278vh;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+}
+#buttom_nav_bar img{
+    width: 514px;
+    margin-left:70px ;
+}
+
+.bt_br_con{
+    color: #fff;
+    line-height: 75px;
+    font-size:44px;
+}
+#buttom_nav_bar button{
+    font-size: 30px;
+    box-shadow: inset 5px 10px 20px rgba(255, 255, 255, 0.278);
+    color: #fff;
+    width: 303px;
+    height: 122px;
+   
+}
+#icons i{
+    font-size: 96px;
+   
+}
+
+
+
+#page3 {
+    width: 344vw;
+    height: 120vh;
+    background-color: #511216;
+    display: flex;
+    color: #fff;
+    gap: 200px;
+    font-family: "Poppins",sans-seri;
+}
+#page3 h3{
+color: #FFE400;
+font-size: 23px;
+}
+.first{
+    padding-top: 100px;
+    font-size: 16px;
+    padding-left: 140px;
+    line-height: 30px;
+}
+.sec{
+    padding-top: 100px;
+    font-size: 16px;
+    padding-left: 50px;
+    line-height: 30px;
+}
+.third{
+    padding-top: 100px;
+    font-size: 16px;
+    padding-left: 50px;
+    line-height: 30px;
+}
+/*  */
+.threedot{
+    position: absolute;
+    width: 179vh;
+    height: 600vh;
+    font-size: 30px;
+    z-index: 999;
+}
+
+#cut{
+    width: 100px;
+    height: 100px;
+    padding-top: 30px;
+    border-radius: 20px;
+    border: 4px solid #000;
+    margin-left:50rem;
+}
+
+
+.threedot h2{
+    position: absolute;
+    font-size:70px;
+    right:150px;
+    width:120px;
+  
+    background:#000;
+    color:#fff;
+    height:130px;
+    border:5px solid #000;
+}
+.threedot ul{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:170vh;
+    height: 400vh;
+    margin-top: 100rem;
+}
+
+.threedot li{
+    margin-top: 100px;
+    line-height: 60px;
+    font-size: 60px;
+    font-weight: bold;
+    list-style: none;
+    text-align:center;
+    border-radius:20px;
+    width:488px;
+    height:63px;
+    border:2px solid #000;
+}
+#dots{
+    font-size:96px ;
+    margin-left:194px;
+    display: block;
+}
+
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+<body>
+    <div id="all">
+
+        <div class="nav_main_1">
+
+
+            <nav class="nav_up">
+                <h3>ANOUCEMENT</h3>
+                <div class="parts_word">
+                    <span>CLICK HERE FOR ADMISSION ENQURY</span>
+                    <span>AICTE Approval (COEB)2022-23</span>
+                    <span>For addmisssion cocntact-0674 -2740133</span>
+                    <span>CLICK HERE FOR ADMISSION ENQURY</span>
+                </div>
+                <div class="buts">
+                    <button>Fee Payment</button>
+                    <button>Student Login</button>
+                    <button>Employee Login</button>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="nav_main_2">
+            <img src="https://www.koustuvgroup.ac.in/images/kgi-silver-jubli-Logo.png " alt="koustub logo">
+
+            <div class="options">
+                <ul>
+                    <li class="list">Home</li>
+                    <li class="list">About KGI</li>
+                    <li class="list">Admission</li>
+                    <li class="list">Academics</li>
+                    <li class="list">Media</li>
+                    <li class="list">Alumni</li>
+                    <li class="list">Career</li>
+                    <li class="list">Contact US</li>
+                </ul>
+            </div>
+            <div id="navbar">
+                <i class="fa-solid fa-bars" id="dots"></i>
+            </div>
+            <div class="threedot  threebut">
+
+                <ul>
+                    <li id="cut">X</li>
+                    <li class="list">Home</li>
+                    <li class="list">About KGI</li>
+                    <li class="list">Admission</li>
+                    <li class="list">Academics</li>
+                    <li class="list">Media</li>
+                    <li class="list">Alumni</li>
+                    <li class="list">Career</li>
+                    <li class="list">Contact US</li>
+                    <li class="list">FEE PAY</li>
+                    <li class="list">Student Login</li>
+                    <li class="list">Employee Login</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav_main_3">
+            <div class="nav_main_sub">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Serach Our Group Of Colleges" id="magne">
+                <button id="srch">SEARCH</button>
+
+            </div>
+        </div>
+
+
+        <div id="icons">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+
+
+
+        <div id="lists">
+            <P>College of Engineering Bhuabaneswar(COEB)</P>
+            <P>koustuv Reasearch Insititute of Medical Science(KRIMS)</P>
+            <p>koustuv Bussiness School(KBS)</p>
+            <p>koustuv Institute of Science(KIS)</p>
+            <p>Naxtra Insitute of Media Studeis</p>
+            <p>koustuv Insitute of Proffestional Studies</p>
+            <p>koustuv School of Engineering(KSE)</p>
+            <p>koustuv Insititute of Self Domain(KISD)</p>
+            <p>Bhuabaneswer International School(BIS)</p>
+
+
+        </div>
+
+
+
+
+
+        <div id="page1">
+            <img class="photos" src=" https://www.koustuvgroup.ac.in/images/slider/2024/1.jpg" alt="koustuv">
+            <img class="photos" src=" https://www.koustuvgroup.ac.in/images/slider/2023/21.jpg" alt="koustuv1">
+            <img class="photos" src="https://www.koustuvgroup.ac.in/images/slider/2023/22.jpg" alt="koustuv2">
+            <img class="photos" src="https://www.koustuvgroup.ac.in/images/slider/2023/32.jpg" alt="koustuv3">
+            <img class="photos" src=" https://www.koustuvgroup.ac.in/images/slider/2023/33.jpeg" alt="koustuv4">
+            <img class="photos" src=" https://www.koustuvgroup.ac.in/images/slider/2023/34.jpg" alt="koustuv5">
+            <img class="photos" src=" https://www.koustuvgroup.ac.in/images/slider/2023/35.jpg" alt="koustuv6">
+            <img class="photos" src="  https://www.koustuvgroup.ac.in/images/slider/2023/36.jpg" alt="koustuv7">
+            <img class="photos" src="   https://www.koustuvgroup.ac.in/images/slider/2023/37.jpg" alt="koustuv8">
+            <img class="photos" src=" https://www.koustuvgroup.ac.in/images/slider/2023/38.jpg" alt="koustuv9">
+
+        </div>
+
+
+
+        <div id="having_bar">
+            <i class="fa-solid fa-arrow-left" id="meva"></i>
+            <div class="circleboxes">
+                <div class="firstimage">
+                    <img src="https://www.koustuvgroup.ac.in/images/icon/h-ic2.png" alt="image1">
+                    <h3>ADMISSION</h3>
+                </div>
+                <div class="firstimage">
+                    <img src="https://www.koustuvgroup.ac.in/images/icon/h-ic1.png" alt="image1">
+                    <h3>ACADMICS</h3>
+                </div>
+                <div class="firstimage">
+                    <img src="https://www.koustuvgroup.ac.in/images/icon/h-ic3.png" alt="image1">
+                    <h3>PLACEMENT</h3>
+                </div>
+            </div>
+            <i class="fa-solid fa-arrow-right" id="move"></i>
+
+        </div>
+
+
+        <div id="page2">
+            <div id="first_colmon">
+                <div class="first_first_sub_colmon">
+                    <div class="blue_buts">
+                        <h2>10</h2>
+                        <h3>FEB,2024</h3>
+                    </div>
+                    <div class="white_space">
+                        <p>D.PHARM STUDENTS HAVE TO CLEAR THE...</p>
+                        <p>it is notified for the information of aall the stud...</p>
+                    </div>
+                </div>
+                <!-- 2nd row -->
+                <div class="first_first_sub_colmon">
+                    <div class="blue_buts">
+                        <h2>25</h2>
+                        <h3>JAN,2024</h3>
+                    </div>
+                    <div class="white_space">
+                        <p>SCHEDULE FOR D.PHARM 1ST YEAR STUDE...</p>
+                        <p>With reference to osbp notice vide:-9281,date...</p>
+                    </div>
+                </div>
+                <!-- 3nd row -->
+                <div class="first_first_sub_colmon">
+                    <div class="blue_buts">
+                        <h2>30</h2>
+                        <h3>DEC,2023</h3>
+                    </div>
+                    <div class="white_space">
+                        <p>B.PHARM 3RD SEMESTER CLASSES WILLC...</p>
+                        <p>All the stuents b.pharmacy 2nd year are here...</p>
+                    </div>
+                </div>
+                <!-- 4nd row -->
+                <div class="first_first_sub_colmon">
+                    <div class="blue_buts">
+                        <h2>27</h2>
+                        <h3>dec,2023</h3>
+                    </div>
+                    <div class="white_space">
+                        <p>CLEAR THE HOSTEL DUES BY 15TH JANUA...</p>
+                        <p>This is to notify that all boarders of koustuv re...</p>
+                    </div>
+                </div>
+
+                <!-- 5nd row -->
+                <div class="first_first_sub_colmon">
+                    <div class="blue_buts">
+                        <h2>20</h2>
+                        <h3>DEC,2023</h3>
+                    </div>
+                    <div class="white_space">
+                        <p>B.PHARM STUDENTS HAVE TO CLEAR THE...</p>
+                        <p>it notified for the information of all the stud...</p>
+                    </div>
+                </div>
+                <!-- 5nd row -->
+                <div class="first_first_sub_colmon">
+                    <div class="blue_buts">
+                        <h2>16</h2>
+                        <h3>DEC,2024</h3>
+                    </div>
+                    <div class="white_space">
+                        <p>PCI PORTAL REGISTRATION</p>
+                        <p>it is infrom all the faculty members of krims...</p>
+                    </div>
+                </div>
+                <!-- the end -->
+
+
+            </div>
+            <!--  -->
+            <div id="sec_colmon">
+                <!-- 1st -->
+                <div class="sec_sec_sub_colmon">
+                    <!-- <div class="sec_blue_buts"> -->
+                    <img src="http://www.koustuvgroup.ac.in/campus_update/logo/55949penta-logo.png" alt="petagonspace">
+                    <!-- </div> -->
+                    <div class="sec_white_space">
+                        <p>PENTAGON SPACE</p>
+                        <p>MCA</p>
+                        <p>No. of Students Selected:8</p>
+                    </div>
+                </div>
+                <!-- 2nd -->
+                <div class="sec_sec_sub_colmon">
+                    <!-- <div class="sec_blue_buts"> -->
+                    <img src="http://www.koustuvgroup.ac.in/campus_update/logo/84893atos.png" alt="petagonspace">
+                    <!-- </div> -->
+                    <div class="sec_white_space">
+                        <p>PENTAGON SPACE</p>
+                        <p>MCA</p>
+                        <p>No. of Students Selected:8</p>
+                    </div>
+                </div>
+
+                <!-- 3nd -->
+                <div class="sec_sec_sub_colmon">
+                    <!-- <div class="sec_blue_buts"> -->
+                    <img src="http://www.koustuvgroup.ac.in/campus_update/logo/42012itc-infotech.png"
+                        alt="petagonspace">
+                    <!-- </div> -->
+                    <div class="sec_white_space">
+                        <p>PENTAGON SPACE</p>
+                        <p>MCA</p>
+                        <p>No. of Students Selected:8</p>
+                    </div>
+                </div>
+                <!-- 4nd -->
+                <div class="sec_sec_sub_colmon">
+                    <!-- <div class="sec_blue_buts"> -->
+                    <img src="http://www.koustuvgroup.ac.in/campus_update/logo/10561arf.png" alt="petagonspace">
+                    <!-- </div> -->
+                    <div class="sec_white_space">
+                        <p>PENTAGON SPACE</p>
+                        <p>MCA</p>
+                        <p>No. of Students Selected:8</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- end -->
+        </div>
+        <div class="butts">
+            <button>READ MORE</button>
+            <button>READ MORE</button>
+        </div>
+
+
+        <div id="buttom_nav_bar">
+            <img src="https://www.koustuvgroup.ac.in/images/3.png  " alt="bulb">
+            <div class="bt_br_con">
+                <h2>WISH TO JOIN US</h2>
+                <p>Help Line:+91 674 2740133 / 2740386/2744407</p>
+            </div>
+            <button>Admission Enquery</button>
+        </div>
+        <div id="page3">
+            <div class="first">
+                <h3>GET IN TOUCH</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </div>
+            <div class="sec">
+                <h3>DOWNLOAD MOBILE APPS</h3>
+                <div class="photos">
+
+                </div>
+                <h3>CONNECT WITH US</h3>
+            </div>
+            <div class="third">
+
+                <h3>GROUP OF INSITITUTIONS</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+
+
+
+    var slideIndex = 0;
+    change();
+    function change() {
+        var i;
+        var x = document.getElementsByClassName("photos");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {
+            slideIndex = 1
+        }
+        x[slideIndex - 1].style.display = "block";
+
+        setTimeout(change, 2000);
+    }
+
+
+
+
+
+    function logo() {
+        let lists = document.getElementById('lists');
+        lists.style.display = "none";
+        let serch = document.getElementById('srch');
+        let mag = document.getElementById('magne');
+        serch.addEventListener('click', () => {
+            lists.style.display = "block";
+        });
+        mag.addEventListener('click', () => {
+            lists.style.display = "block";
+        });
+
+        lists.addEventListener('mouseleave', () => {
+            lists.style.display = "none";
+        })
+    }
+
+    logo();
+
+
+
+
+    let three = document.querySelector('.threebut');
+    let thor = document.querySelector('.threedot');
+    let cut = document.getElementById('cut');
+
+    let dots = document.getElementById('dots');
+    dots.addEventListener('click', () => {
+        three.style.display = "block";
+    })
+    cut.addEventListener('click', () => {
+        three.style.display = "none";
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function gap() {
+        gsap.to('.nav_main_2', {
+            position: "fixed",
+            height: "35vh",
+            duration: 2,
+            top: "0",
+            scrollTrigger: {
+                trigger: ".nav_main_3",
+                start: "top -10%",
+                end: "top -20%",
+                scrub: 5,
+            }
+        })
+    }
+    gap();
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
